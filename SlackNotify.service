@@ -1,0 +1,14 @@
+[Unit]
+Description=Send Slack notification on system startup
+After=network.target
+
+[Service]
+Type=simple
+Environment="PYTHONUNBUFFERED=1"
+WorkingDirectory=/opt/SlackNotify
+ExecStart=/usr/bin/python3 /opt/SlackNotify/SlackNotify.py
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+[DEFAULT]
+Description = Device online
+Slack_Webhook_URL = 
